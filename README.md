@@ -3,12 +3,6 @@
 > **99.49% test accuracy · 10,634 trainable parameters · 24.18 KB TFLite model · 0.263 ms inference**
 
 MyanNet is a lightweight convolutional neural network for classifying handwritten Burmese digits (၀–၉) from the [BHDD dataset](https://arxiv.org/abs/2603.21966). It combines depthwise separable convolutions, global average pooling, and batch normalization to achieve near state-of-the-art accuracy at a fraction of the parameter count — making it deployable on edge devices such as Android phones and Raspberry Pi.
-
-This work is described in the paper:
-
-> **MyanNet: A Lightweight Convolutional Neural Network with Depthwise Separable Convolutions for Burmese Handwritten Digit Recognition**  
-> Ah Maung Oo, Dr. Tarannum Bloch — Marwadi University, Rajkot, Gujarat, India
-
 ---
 
 ## Table of Contents
@@ -213,23 +207,6 @@ interpreter.set_tensor(input_details[0]['index'], image)
 interpreter.invoke()
 
 predicted_class = np.argmax(interpreter.get_tensor(output_details[0]['index']))
-```
-
----
-
-## Citation
-
-If you use MyanNet or this codebase in your research, please cite:
-
-```bibtex
-@article{maungoo2026myannet,
-  title   = {MyanNet: A Lightweight Convolutional Neural Network with Depthwise
-             Separable Convolutions for Burmese Handwritten Digit Recognition},
-  author  = {Ah Maung Oo and Tarannum Bloch},
-  year    = {2026},
-  note    = {Department of Computer Science and Engineering,
-             Marwadi University, Rajkot, Gujarat, India}
-}
 ```
 
 ---
