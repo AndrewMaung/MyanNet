@@ -109,7 +109,7 @@ MyanNet is trained and evaluated on the **Burmese Handwritten Digit Dataset (BHD
 - **27,561** test samples (naturally imbalanced: 389–6,856 per class)
 - Format: identical to MNIST (pickle file)
 
-Download from Kaggle: [`ahmaungoo/bhdd-set`](https://www.kaggle.com/datasets/ahmaungoo/bhdd-set)
+Download from BHDD dataset from Github: https://github.com/baseresearch/BHDD
 
 After downloading, place `data.pkl` at:
 ```
