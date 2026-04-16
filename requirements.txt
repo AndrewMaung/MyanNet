@@ -1,0 +1,17 @@
+# MyanNet — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Deep learning
+tensorflow>=2.10.0
+
+# Hyperparameter optimization
+optuna>=3.0.0
+
+# Data handling & evaluation
+numpy>=1.23.0
+pandas>=1.5.0
+scikit-learn>=1.1.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0

@@ -1,0 +1,51 @@
+════════════════════════════════════════════════════════════
+  MyanNet — Final Results Summary
+  Generated: 2026-04-13 09:10:47
+════════════════════════════════════════════════════════════
+
+── Dataset ──
+  Training samples  : 60,000
+  Test samples      : 27,561
+  Classes           : 10
+
+── Best Hyperparameters (Optuna, 50 trials) ──
+  filters1            : 64
+  filters2            : 64
+  dropout             : 0.19369249293034319
+  learning_rate       : 0.003004836279033769
+  dense_units         : 64
+
+── Model ──
+  Architecture      : Depthwise Separable CNN + GAP
+  Trainable params  : 10,634
+  Inference params  : 11,018
+
+── Final Test Set Performance ──
+  Test accuracy     : 0.9949  (99.49%)
+  Test loss         : 0.5243
+
+── 5-Fold Cross-Validation (test set) ──
+  Fold 1             : 0.9940  (99.40%)
+  Fold 2             : 0.9938  (99.38%)
+  Fold 3             : 0.9955  (99.55%)
+  Fold 4             : 0.9952  (99.52%)
+  Fold 5             : 0.9944  (99.44%)
+  Mean ± Std        : 0.9946 ± 0.0006
+
+── TFLite Quantized Model ──
+  Model size        : 24.18 KB
+  Mean latency      : 0.263 ms / image
+  P95 latency       : 0.299 ms / image
+
+── Model Comparison ──
+  Baseline CNN      : 99.58%  (34,826 trainable params)
+  GAP-BN CNN        : 99.51%  (21,418 trainable params)
+  MyanNet (ours)    : 99.49%  (10,634 trainable params)
+  Param reduction   : 69.5% fewer than Baseline
+
+── Output Files ──
+  myannet_best.keras, myannet_quantized.tflite
+  best_params.json, kfold_results.json, benchmark_results.json
+  confusion_matrix.png, training_curves.png, model_comparison.png
+  kfold_results.png, optuna_results.png, misclassified_samples.png
+════════════════════════════════════════════════════════════
